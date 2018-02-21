@@ -43,9 +43,9 @@ end
 x1 = [10,2];
 fprintf("X1 is in Class %d\n", findClass(x1));
 x2 = [-3,4];
-fprintf("X1 is in Class %d\n", findClass(x2));
+fprintf("X2 is in Class %d\n", findClass(x2));
 x3 = [2,2];
-fprintf("X1 is in Class %d\n", findClass(x3));
+fprintf("X3 is in Class %d\n", findClass(x3));
 x4 = [5,-7];
-fprintf("X1 is in Class %d\n", findClass(x4));
+fprintf("X4 is in Class %d\n", findClass(x4));
 end

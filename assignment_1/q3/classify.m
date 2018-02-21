@@ -30,4 +30,22 @@ end
 [mu1, Cov1] = GetMeanAndVariance(class1);
 [mu2, Cov2] = GetMeanAndVariance(class2);
 [mu3, Cov3] = GetMeanAndVariance(class3);
+
+
+    function class = findClass(x)
+        d1 = mahal(x, class1);
+        d2= mahal(x, class2);
+        d3 = mahal(x, class3);
+        min_mahal = min([d1,d2,d3]);
+        class = find([d1, d2, d3] == min_mahal, 1);
+    end
+% Test Mahalnobis distance
+x1 = [10,2];
+fprintf("X1 is in Class %d\n", findClass(x1));
+x2 = [-3,4];
+fprintf("X1 is in Class %d\n", findClass(x2));
+x3 = [2,2];
+fprintf("X1 is in Class %d\n", findClass(x3));
+x4 = [5,-7];
+fprintf("X1 is in Class %d\n", findClass(x4));
 end
